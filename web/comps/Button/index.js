@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const Container = styled.div`
     width: 217px;
     height: 57px;
     background-color: ${props=>props.bgcolor};
+    border-radius: 28.5px;
 `
 
 const TextCont = styled.div`
@@ -15,10 +17,11 @@ const TextCont = styled.div`
 
 const Button = ({
     bgcolor='#58778A',
-    text="Start Game"
+    text="Start Game",
+    routeTo="/home"
 
 }) => {
-    return <Container bgcolor={bgcolor}>
+    return <Container bgcolor={bgcolor} onClick={()=>router.push(routeTo)}>
         <TextCont>{text}</TextCont>
     </Container>
 }
