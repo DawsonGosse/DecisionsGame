@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
 const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 217px;
     height: 57px;
     background-color: ${props=>props.bgcolor};
