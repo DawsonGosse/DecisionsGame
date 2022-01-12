@@ -18,6 +18,9 @@ const Holder = styled.div `
 };
 `;
 
+let Player1_Scores = {rockpapersissors:0,tictactoe:0,coinflip:0}
+let Player2_Scores = {rockpapersissors:0,tictactoe:0,coinflip:0}
+
 export default function Leaderboard() {
 
     return <Holder>
@@ -25,16 +28,16 @@ export default function Leaderboard() {
             <h1>Leaderboard</h1>
             <h3>PLAYER 1</h3>
             <div className ="container2">
-            <CircleText></CircleText>
-            <CircleText text='Paper' back='#85A9A1'></CircleText>
-            <CircleText text='Scissors' back='#D3E1C5'></CircleText> 
+            <CircleText text={Player1_Scores.rockpapersissors}></CircleText>
+            <CircleText text={Player1_Scores.tictactoe} back='#85A9A1'></CircleText>
+            <CircleText text={Player1_Scores.coinflip} back='#D3E1C5'></CircleText> 
             </div>  
             
             <h3>PLAYER 2</h3>
             <div className ="container2">
-            <CircleText></CircleText>
-            <CircleText text='Paper' back='#85A9A1'></CircleText>
-            <CircleText text='Scissors' back='#D3E1C5'></CircleText> 
+            <CircleText text={Player2_Scores.rockpapersissors}></CircleText>
+            <CircleText text={Player2_Scores.tictactoe} back='#85A9A1'></CircleText>
+            <CircleText text={Player2_Scores.coinflip} back='#D3E1C5'></CircleText> 
             </div>           
             <Button></Button>
         </div>
