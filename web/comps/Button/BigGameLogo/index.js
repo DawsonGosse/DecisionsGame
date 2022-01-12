@@ -21,8 +21,10 @@ justify-content: center;
 `;
 
 const BigGameLogo = ({
+    width="200px",
+    height="200px",
 bgcolor="#FAD",
-img="https://www.paradigm.com/2676-home_default/rock-monitor-60-sm.jpg",
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Red_TicTacToe_Icon.svg/1024px-Red_TicTacToe_Icon.svg.png",
 
 }) => {
     return (

@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <BigGameLogo />
+        <BigGameLogo bgcolor="#FAD" width="200px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Red_TicTacToe_Icon.svg/1024px-Red_TicTacToe_Icon.svg.png"  />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
