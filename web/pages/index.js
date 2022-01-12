@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import BigGameLogo from '../comps/Button/BigGameLogo'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <BigGameLogo bgcolor="#FAD" width="200px" height="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Red_TicTacToe_Icon.svg/1024px-Red_TicTacToe_Icon.svg.png"  />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
