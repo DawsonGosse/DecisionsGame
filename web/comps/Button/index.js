@@ -21,10 +21,10 @@ const TextCont = styled.div`
 const Button = ({
     bgcolor='#58778A',
     text="Start Game",
-    routeTo="/home"
+    onButtonClick=()=>{}
 
 }) => {
-    return <Container bgcolor={bgcolor} onClick={()=>router.push(routeTo)}>
+    return <Container bgcolor={bgcolor} onClick={()=>{onButtonClick()}}>
         <TextCont>{text}</TextCont>
     </Container>
 }
