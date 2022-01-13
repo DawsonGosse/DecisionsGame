@@ -38,11 +38,13 @@ const Flip = function(){
         if (userChoice == "Heads") {
             if (coin <= 0.5) {
                 console.log("Player 1 Wins!");
+                alert("Player 1 Wins!")
                 p1Score++
                 console.log(p1Score)
             }
             else {
                 console.log ("Player 2 Wins!");
+                alert("Player 2 Wins!")
                 p2Score++
                 console.log(p2Score)
             }
@@ -50,11 +52,13 @@ const Flip = function(){
         if (userChoice == "Tails") {
             if (coin > 0.5) {
                 console.log("Player 1 Wins!");
+                alert("Player 1 Wins!")
                 p1Score++
                 console.log(p1Score)
             }
             else {
                 console.log("Player 2 Wins!");
+                alert("Player 2 Wins!")
                 p2Score++
                 console.log(p2Score)
             }
@@ -78,8 +82,8 @@ export default function CoinFlip() {
             <h3>Pick One</h3>
 
             <Buttons>
-                <CoinButton onClick={SelectHeads}></CoinButton>
-                <CoinButton onClick={SelectTails} src="tails.svg" text="Tails"></CoinButton>
+                <CoinButton onButtonClick={SelectHeads}></CoinButton>
+                <CoinButton onButtonClick={SelectTails} src="tails.svg" text="Tails"></CoinButton>
             </Buttons>
 
             <Button text='Done'bgcolor="#D3E1C5"></Button>
