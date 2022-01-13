@@ -14,3 +14,36 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*************** TIC TAC TOE ***************/
+
+.MainCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: screen;
+}
+
+.square{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height:300px;
+  background-color: aquamarine;
+}
+
+.innerSquares{
+  background-color: salmon;
+  border: 2px black solid;
+  width:100px;
+  height:100px;
+  position: relative;
+}
+
+.placeholder{
+  position: absolute;
+  font-size: 70px;
+  color:white;
+  margin-left: 25px;
+}
