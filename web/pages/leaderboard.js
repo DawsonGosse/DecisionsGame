@@ -17,9 +17,46 @@ const Holder = styled.div `
     align-items:center;
 };
 `;
+if (typeof window !== "undefined") {
+
+    var P1RockPaperSissors = localStorage.getItem("P1rockpapersissors")
+    var P2RockPaperSissors = localStorage.getItem("P2rockpapersissors")
+    var P1CoinFlip = localStorage.getItem("P1CoinFlip")
+    var P2CoinFlip = localStorage.getItem("P2CoinFlip")
+
+    
+}
+
 
 let Player1_Scores = {rockpapersissors:0,tictactoe:0,coinflip:0}
 let Player2_Scores = {rockpapersissors:0,tictactoe:0,coinflip:0}
+
+Player1_Scores.rockpapersissors = P1RockPaperSissors
+Player2_Scores.rockpapersissors = P2RockPaperSissors
+Player1_Scores.coinflip= P1CoinFlip
+Player2_Scores.coinflip = P2CoinFlip
+
+Player1_Scores.Total = function(){ return this.rockpapersissors + this.tictactoe + this.coinflip}
+console.log(Player1_Scores.Total())
+
+Player2_Scores.Total = function(){ return this.rockpapersissors + this.tictactoe + this.coinflip}
+console.log(Player2_Scores.Total())
+
+const Overall = function(){
+    if(Player1_Scores.Total() > Player2_Scores.Total())
+    {
+        console.log('Player 1 wins overall')
+    }
+    else if(Player1_Scores.Total() < Player2_Scores.Total())
+    {
+        console.log("Play 2 wins overall")
+    }
+    else
+    {
+        console.log("Its a tie!")
+    }
+}
+Overall()
 
 export default function Leaderboard() {
 

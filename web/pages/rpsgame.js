@@ -18,6 +18,14 @@ const Holder = styled.div `
 };
 `;
 
+if (typeof window !== "undefined") {
+
+    localStorage.setItem("P1rockpapersissors", 10)
+    localStorage.setItem("P2rockpapersissors", 8)
+    
+}
+
+
 export default function RPS() {
 
     return <Holder>
