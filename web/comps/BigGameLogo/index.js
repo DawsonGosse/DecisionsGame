@@ -21,8 +21,8 @@ justify-content: center;
 `;
 
 const BigGameLogo = ({
-    width="200px",
-    height="200px",
+    width="150px",
+    height="150px",
     bgcolor="#58778A",
     src="/rps.svg",
 
