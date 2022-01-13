@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Square from "./Square"
-
+import Button from "../Button"
 // Grid/Playing Field
 const INITIAL_GRID = [
     ['-','-','-'],
@@ -84,7 +84,7 @@ const Game = props=>{
         
     }
 
-    
+
     const setValue = (i,j) =>{
         const newGrid = [...grid];
         if(newGrid[i][j]!='-') return;
@@ -143,6 +143,9 @@ const Game = props=>{
                         )
                     })
                 }
+                 <Button text="Main Menu" routeTo="/"></Button>
+                 <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                 <br></br>
         </div>
         </>
     )
