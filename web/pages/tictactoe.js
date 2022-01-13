@@ -30,7 +30,7 @@ export default function Coin() {
   return (
     <Container>
       <GameTitle>
-        <BigGameLogo src="/coinflip.svg" bgcolor="#85A9A1" ></BigGameLogo>
+        <BigGameLogo src="/tictactoe.svg" bgcolor="#85A9A1" ></BigGameLogo>
         <h2>Tic Tac Toe</h2>
         <p>Make a decision by playing tic tac toe!</p>
       </GameTitle>
