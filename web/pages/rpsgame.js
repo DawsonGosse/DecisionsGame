@@ -33,9 +33,9 @@ export default function RPS() {
             <h1>PLAYER 1</h1>
             <h3>Pick One</h3>
             <div className ="container2">
-            <CircleText></CircleText>
-            <CircleText text='Paper' back='#85A9A1'></CircleText>
-            <CircleText text='Scissors' back='#D3E1C5'></CircleText> 
+            <CircleText src="/rock.svg"></CircleText>
+            <CircleText src="/paper.svg" text='Paper' back='#85A9A1'></CircleText>
+            <CircleText src="/scissors.svg" text='Scissors' back='#D3E1C5'></CircleText> 
             </div>  
               
             <Button text='Done'></Button>

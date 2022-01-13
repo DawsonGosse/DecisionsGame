@@ -26,20 +26,20 @@ const GameTitle = styled.div`
 `
 
 
-export default function Home() {
+export default function Coin() {
   return (
     <Container>
       <GameTitle>
-        <BigGameLogo></BigGameLogo>
-        <h2>Rock Paper Scissors</h2>
-        <p>Make a decision by playing rock paper scissors!</p>
+        <BigGameLogo src="/coinflip.svg" bgcolor="#85A9A1" ></BigGameLogo>
+        <h2>Tic Tac Toe</h2>
+        <p>Make a decision by playing tic tac toe!</p>
       </GameTitle>
       <SliderCont>
-        <Slider routeTo="/"></Slider>
-        <Slider routeTo="/tictactoe" back="lightgrey"></Slider>
+        <Slider routeTo="/" back="lightgrey"></Slider>
+        <Slider routeTo="/tictactoe" back="#85A9A1"></Slider>
         <Slider routeTo="/coin" back="lightgrey"></Slider>
       </SliderCont>
-        <Button routeTo="/rpsgame"></Button>
+        <Button routeTo="/tictacgame" bgcolor="#85A9A1" ></Button>
     </Container>
   )
 }
