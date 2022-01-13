@@ -2,6 +2,22 @@ import styled from 'styled-components';
 import React, {useState} from 'react';
 import CircleText from '../comps/CircleText';
 import Button from '../comps/Button';
+import CoinButton from '../comps/CoinButton';
+
+const Container  = styled.div `
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+`;
+
+const Buttons  = styled.div `
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+`;
+
 
 
 let p1Score = 0;
@@ -56,12 +72,17 @@ export default function CoinFlip() {
             userChoice = "Tails"
             Flip()
         }
-        return <div>
-            <div>
-                <h1>Player one select your choice</h1>
-                <button onClick={SelectHeads}>Heads</button>
-                <button onClick={SelectTails}>Tails</button>
-            </div>
+        return <Container>
+
+            <h1>PLAYER 1</h1>
+            <h3>Pick One</h3>
+
+            <Buttons>
+                <CoinButton onClick={SelectHeads}></CoinButton>
+                <CoinButton onClick={SelectTails} src="tails.svg" text="Tails"></CoinButton>
+            </Buttons>
+
+            <Button text='Done'bgcolor="#D3E1C5"></Button>
     
-        </div>
+        </Container>
     }

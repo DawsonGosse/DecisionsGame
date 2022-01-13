@@ -65,16 +65,16 @@ export default function Leaderboard() {
             <h1>Leaderboard</h1>
             <h3>PLAYER 1</h3>
             <div className ="container2">
-            <CircleText text={Player1_Scores.rockpapersissors}></CircleText>
-            <CircleText text={Player1_Scores.tictactoe} back='#85A9A1'></CircleText>
-            <CircleText text={Player1_Scores.coinflip} back='#D3E1C5'></CircleText> 
+            <CircleText text={Player1_Scores.rockpapersissors} src='/rps.svg'></CircleText>
+            <CircleText text={Player1_Scores.tictactoe} back='#85A9A1' src='/tictactoe.svg'></CircleText>
+            <CircleText text={Player1_Scores.coinflip} back='#D3E1C5' src='/coinflip.svg'></CircleText> 
             </div>  
             
             <h3>PLAYER 2</h3>
             <div className ="container2">
-            <CircleText text={Player2_Scores.rockpapersissors}></CircleText>
-            <CircleText text={Player2_Scores.tictactoe} back='#85A9A1'></CircleText>
-            <CircleText text={Player2_Scores.coinflip} back='#D3E1C5'></CircleText> 
+            <CircleText text={Player2_Scores.rockpapersissors}  src='/rps.svg'></CircleText>
+            <CircleText text={Player2_Scores.tictactoe} back='#85A9A1'src='/tictactoe.svg'></CircleText>
+            <CircleText text={Player2_Scores.coinflip} back='#D3E1C5' src='/coinflip.svg'></CircleText> 
             </div>           
             <Button></Button>
         </div>
