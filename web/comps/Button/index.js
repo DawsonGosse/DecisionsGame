@@ -21,10 +21,13 @@ const TextCont = styled.div`
 const Button = ({
     bgcolor='#58778A',
     text="Start Game",
-    onButtonClick=()=>{}
+    routeTo="/rpsgame",
 
 }) => {
-    return <Container bgcolor={bgcolor} onClick={()=>{onButtonClick()}}>
+
+    const router = useRouter();
+
+    return <Container bgcolor={bgcolor} onClick={()=>router.push(routeTo)}>
         <TextCont>{text}</TextCont>
     </Container>
 }

@@ -23,8 +23,8 @@ justify-content: center;
 const BigGameLogo = ({
     width="200px",
     height="200px",
-bgcolor="#FAD",
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Red_TicTacToe_Icon.svg/1024px-Red_TicTacToe_Icon.svg.png",
+    bgcolor="#58778A",
+    src="/rps.svg",
 
 }) => {
     return (
