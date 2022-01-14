@@ -23,6 +23,8 @@ if (typeof window !== "undefined") {
     var P2RockPaperSissors = localStorage.getItem("P2rockpapersissors")
     var P1CoinFlip = localStorage.getItem("P1CoinFlip")
     var P2CoinFlip = localStorage.getItem("P2CoinFlip")
+    var P1TicTacToe= localStorage.getItem("P1TicTacToe")
+    var P2TicTacToe = localStorage.getItem("P2TicTacToe")
 
     
 }
@@ -33,8 +35,10 @@ let Player2_Scores = {rockpapersissors:0,tictactoe:0,coinflip:0}
 
 Player1_Scores.rockpapersissors = P1RockPaperSissors
 Player2_Scores.rockpapersissors = P2RockPaperSissors
-Player1_Scores.coinflip= P1CoinFlip
+Player1_Scores.coinflip = P1CoinFlip
 Player2_Scores.coinflip = P2CoinFlip
+Player1_Scores.tictactoe = P1TicTacToe
+Player2_Scores.tictactoe = P2TicTacToe
 
 Player1_Scores.Total = function(){ return this.rockpapersissors + this.tictactoe + this.coinflip}
 console.log(Player1_Scores.Total())

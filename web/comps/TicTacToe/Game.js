@@ -134,7 +134,18 @@ const Game = props=>{
            setGameEnd(true);
            setGameWinner(winner)
            setGrid(INITIAL_GRID);
+
         }
+    }
+
+    let p1Score = 0;
+    let p2Score = 0;
+
+    if (typeof window !== "undefined") {
+
+        localStorage.setItem("P1TicTacToe", p1Score)
+        localStorage.setItem("P2TicTacToe", p2Score)
+        
     }
 
 
@@ -144,7 +155,7 @@ const Game = props=>{
             {
                 gameEnd?(
                     <div>
-                        the {gameWinner==='X'?'Player 1 (X)':'Player 2 (O)'} Won The Game!                    
+                        {gameWinner==='X'?'Player 1 (X)':'Player 2 (O)'} Won The Game!                   
                         </div>
                 ):(
                     <div>

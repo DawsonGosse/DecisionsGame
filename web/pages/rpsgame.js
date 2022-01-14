@@ -19,14 +19,11 @@ const PlayerChoicesCont = styled.div`
 `
 
 //Leaderboard
-if (typeof window !== "undefined") {
-    localStorage.setItem("P1rockpapersissors", p1Score)
-    localStorage.setItem("P2rockpapersissors", p2Score)
-}
+
+let p1ScoreRPS = 0;
+let p2ScoreRPS = 0;
 
 
-let p1Score = 0;
-let p2Score = 0;
 
 
 //Game
@@ -41,32 +38,36 @@ let Compare = function(choice1, choice2) {
 
     //Player 1 Wins
     if (choice1 == 'paper' && choice2 == 'rock') {
-        p1Score++
+        p1ScoreRPS++
         alert('player 1 wins')
 
     }
     if (choice1 == 'rock' && choice2 == 'scissors') {
-        p1Score++
+        p1ScoreRPS++
         alert('player 1 wins')
         
     }
     if (choice1 == 'scissors' && choice2 == 'paper') {
-        p1Score++
+        p1ScoreRPS++
         alert('player 1 wins')
     }
 
     //Player 2 Wins
     if (choice2 == 'paper' && choice1 == 'rock') {
-        p2Score++
+        p2ScoreRPS++
         alert('player 2 wins')
     }
     if (choice2 == 'rock' && choice1 == 'scissors') {
-        p2Score++
+        p2ScoreRPS++
         alert('player 2 wins')
     }
     if (choice2 == 'scissors' && choice1 == 'paper') {
-        p2Score++
+        p2ScoreRPS++
         alert('player 2 wins')
+    }
+    if (typeof window !== "undefined") {
+        localStorage.setItem("P1rockpapersissors", p1ScoreRPS)
+        localStorage.setItem("P2rockpapersissors", p2ScoreRPS)
     }
 }   
 

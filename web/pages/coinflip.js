@@ -47,6 +47,7 @@ const Flip = function(){
     }
 
     let coin = Math.random();
+    console.log(coin)
 
         if (userChoice == "Heads") {
             if (coin <= 0.5) {
@@ -55,7 +56,7 @@ const Flip = function(){
                 p1Score++
                 console.log(p1Score)
             }
-            else {
+            else if(coin > 0.5){
                 console.log ("Player 2 Wins!");
                 alert("Player 2 Wins!")
                 p2Score++
@@ -63,13 +64,13 @@ const Flip = function(){
             }
         }
         if (userChoice == "Tails") {
-            if (coin > 0.5) {
+            if (coin <= 0.5) {
                 console.log("Player 1 Wins!");
                 alert("Player 1 Wins!")
                 p1Score++
                 console.log(p1Score)
             }
-            else {
+            else if(coin > 0.5) {
                 console.log("Player 2 Wins!");
                 alert("Player 2 Wins!")
                 p2Score++
