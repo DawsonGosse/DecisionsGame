@@ -66,18 +66,19 @@ function Compare(choice1, choice2) {
     //Player 1 Wins
     if (choice1 == 'paper' && choice2 == 'rock') {
         console.log('player 1 wins')
-        alert('player 1 wins')
+        alert('player 1 wins, ' + choice1 + ' beats ' + choice2)
         p1Score++
         console.log(p1Score)
     }
     if (choice1 == 'rock' && choice2 == 'scissors') {
         console.log('player 1 wins')
-        alert('player 1 wins')
+        alert('player 1 wins, ' + choice1 + ' beats ' + choice2)
         p1Score++
         console.log(p1Score)
     }
     if (choice1 == 'scissors' && choice2 == 'paper') {
-        alert('player 1 wins')
+        console.log('player 1 wins')
+        alert('player 1 wins, ' + choice1 + ' beats ' + choice2)
         p1Score++
         console.log(p1Score)
     }
@@ -85,19 +86,19 @@ function Compare(choice1, choice2) {
     //Player 2 Wins
     if (choice2 == 'paper' && choice1 == 'rock') {
         console.log('player 2 wins')
-        alert('player 2 wins')
+        alert('player 2 wins, ' + choice2 + ' beats ' + choice1)
         p2Score++
         console.log(p2Score)
     }
     if (choice2 == 'rock' && choice1 == 'scissors') {
         console.log('player 2 wins')
-        alert('player 2 wins')
+        alert('player 2 wins, ' + choice2 + ' beats ' + choice1)
         p2Score++
         console.log(p2Score)
     }
     if (choice2 == 'scissors' && choice1 == 'paper') {
         console.log('player 2 wins')
-        alert('player 2 wins')
+        alert('player 2 wins, ' + choice2 + ' beats ' + choice1)
         p2Score++
         console.log(p2Score)
     }
