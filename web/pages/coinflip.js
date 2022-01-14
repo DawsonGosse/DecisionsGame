@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import React, {useState} from 'react';
-import CircleText from '../comps/CircleText';
+import React from 'react';
 import Button from '../comps/Button';
 import CoinButton from '../comps/CoinButton';
 
