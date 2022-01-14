@@ -49,6 +49,7 @@ let user2Choice = 'null'
 let p1Score = 0
 let p2Score = 0
 
+//Game
 function Compare(choice1, choice2) {
     //Leaderboard
     if (typeof window !== "undefined") {
@@ -102,38 +103,45 @@ function Compare(choice1, choice2) {
     }
 }   
 
+//Run the game and clear previous scores
 function Results() {
     Compare(user1Choice, user2Choice)
     user1Choice = "null"
     user2Choice = "null"
-
 }
+
 export default function RPS() {
     //Player 1 Choices
     const SelectPaper1 = function(){
         user1Choice = "paper"
+        alert('paper selected')
         console.log('paper1')
     } 
     const SelectRock1 = function(){
         user1Choice = "rock"
+        alert('rock selected')
         console.log('rock1')
     } 
     const SelectScissor1 = function(){
         user1Choice = "scissors"
+        alert('scissor selected')
         console.log('scissor1')
     } 
 
     //Player 2 Choices
     const SelectPaper2 = function(){
         user2Choice = "paper"
+        alert('paper selected')
         console.log('paper2')
     } 
     const SelectRock2 = function(){
         user2Choice = "rock"
+        alert('rock selected')
         console.log('rock2')
     } 
     const SelectScissor2 = function(){
         user2Choice = "scissors"
+        alert('scissor selected')
         console.log('scissor2')
     } 
     
