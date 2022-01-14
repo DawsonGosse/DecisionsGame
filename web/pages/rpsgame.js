@@ -20,9 +20,14 @@ const PlayerChoicesCont = styled.div`
 
 //Leaderboard
 if (typeof window !== "undefined") {
-    localStorage.setItem("P1rockpapersissors", 10)
-    localStorage.setItem("P2rockpapersissors", 8)
+    localStorage.setItem("P1rockpapersissors", p1Score)
+    localStorage.setItem("P2rockpapersissors", p2Score)
 }
+
+
+let p1Score = 0;
+let p2Score = 0;
+
 
 //Game
 let user1Choice = 'null'
@@ -36,23 +41,31 @@ let Compare = function(choice1, choice2) {
 
     //Player 1 Wins
     if (choice1 == 'paper' && choice2 == 'rock') {
+        p1Score++
         alert('player 1 wins')
+
     }
     if (choice1 == 'rock' && choice2 == 'scissors') {
+        p1Score++
         alert('player 1 wins')
+        
     }
     if (choice1 == 'scissors' && choice2 == 'paper') {
+        p1Score++
         alert('player 1 wins')
     }
 
     //Player 2 Wins
     if (choice2 == 'paper' && choice1 == 'rock') {
+        p2Score++
         alert('player 2 wins')
     }
     if (choice2 == 'rock' && choice1 == 'scissors') {
+        p2Score++
         alert('player 2 wins')
     }
     if (choice2 == 'scissors' && choice1 == 'paper') {
+        p2Score++
         alert('player 2 wins')
     }
 }   
