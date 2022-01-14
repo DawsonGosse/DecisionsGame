@@ -16,7 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    margin-top: 60px;
+    margin-top: ;
 `
 
 const Buttons = styled.div`
@@ -25,7 +25,6 @@ const Buttons = styled.div`
     justify-content:center;
     align-items:center;
     margin-top: 30px;
-    padding-left: 40px;
 `
 const LeaderButton = styled.div`
     display: flex;

@@ -16,7 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    margin-top: 60px;
+    margin-top: 5%;
 `
 
 const Buttons = styled.div`
@@ -24,16 +24,9 @@ const Buttons = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
+    margin-top: 5%;
 `
-const LeaderButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-`
+const Lea
 
 
 //Setup for turns and ending games
@@ -172,10 +165,8 @@ const Game = props=>{
                         }
                         <Buttons>
                             <Button text="Main Menu" routeTo="/"></Button>
-                            <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
-                                <br></br>
-                            </LeaderButton>
+                            <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                            <br></br>
                         </Buttons>     
                 </div>
             </Container>

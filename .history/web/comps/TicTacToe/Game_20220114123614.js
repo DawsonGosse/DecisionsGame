@@ -16,7 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    margin-top: 60px;
+    margin-top: 5%;
 `
 
 const Buttons = styled.div`
@@ -24,15 +24,14 @@ const Buttons = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
+    margin-top: 30;
 `
 const LeaderButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
 `
 
 

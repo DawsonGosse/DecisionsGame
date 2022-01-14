@@ -13,26 +13,12 @@ const INITIAL_GRID = [
 // Page Layout
 const Container = styled.div`
     display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 60px;
+    margin-top: 5%;
 `
 
 const Buttons = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
-`
-const LeaderButton = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
+    margin-top: 5%;
 `
 
 
@@ -172,11 +158,9 @@ const Game = props=>{
                         }
                         <Buttons>
                             <Button text="Main Menu" routeTo="/"></Button>
-                            <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
-                                <br></br>
-                            </LeaderButton>
-                        </Buttons>     
+                            <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                            <br></br>
+                        </buttonContainer>     
                 </div>
             </Container>
         </> 

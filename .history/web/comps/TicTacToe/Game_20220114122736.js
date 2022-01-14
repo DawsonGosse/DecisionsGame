@@ -13,26 +13,9 @@ const INITIAL_GRID = [
 // Page Layout
 const Container = styled.div`
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content:center;
     align-items:center;
-    margin-top: 60px;
-`
-
-const Buttons = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
-`
-const LeaderButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
 `
 
 
@@ -140,7 +123,7 @@ const Game = props=>{
 
 
     return( 
-        <>
+            <>
             {
                 gameEnd?(
                     <div>
@@ -170,16 +153,11 @@ const Game = props=>{
                                 )
                             })
                         }
-                        <Buttons>
-                            <Button text="Main Menu" routeTo="/"></Button>
-                            <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
-                                <br></br>
-                            </LeaderButton>
-                        </Buttons>     
+                        <Button text="Main Menu" routeTo="/"></Button>
+                        <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                        <br></br>
                 </div>
-            </Container>
-        </> 
+            </> </Container>
     )
 }
 
