@@ -152,6 +152,7 @@ const Game = props=>{
 
     return( 
         <>
+        <h1>Tic tac Toe</h1>
             {
                 gameEnd?(
                     <div>
@@ -182,9 +183,9 @@ const Game = props=>{
                             })
                         }
                         <Buttons>
-                            <Button text="Main Menu" routeTo="/"></Button>
+                            <Button bgcolor="#85A9A1" text="Done" routeTo="/"></Button>
                             <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                                <Button bgcolor="rgba(133, 169, 161, 0.50)" text="Leaderboards" routeTo="/leaderboard"></Button>
                                 <br></br>
                             </LeaderButton>
                         </Buttons>     
