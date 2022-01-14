@@ -76,7 +76,7 @@ export default function Leaderboard() {
             <CircleText text={Player2_Scores.tictactoe} back='#85A9A1'src='/tictactoe.svg'></CircleText>
             <CircleText text={Player2_Scores.coinflip} back='#D3E1C5' src='/coinflip.svg'></CircleText> 
             </div>           
-            <Button></Button>
+            <Button routeTo="/" text="Back to Games"></Button>
         </div>
 
     </Holder>

@@ -24,6 +24,13 @@ const GameTitle = styled.div`
   justify-content: center;
   padding-top: 50px;
 `
+const LeaderButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
 
 
 export default function Home() {
@@ -40,6 +47,9 @@ export default function Home() {
         <Slider routeTo="/coin" back="lightgrey"></Slider>
       </SliderCont>
         <Button routeTo="/rpsgame"></Button>
+          <LeaderButton>
+            <Button routeTo="/leaderboard" text="Leaderboard" bgcolor="rgba(88, 119, 138, 0.54)"></Button>
+          </LeaderButton>
     </Container>
   )
 }
