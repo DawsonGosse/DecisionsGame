@@ -13,26 +13,9 @@ const INITIAL_GRID = [
 // Page Layout
 const Container = styled.div`
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content:center;
     align-items:center;
-    margin-top: 60px;
-`
-
-const Buttons = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
-`
-const LeaderButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
 `
 
 
@@ -139,8 +122,8 @@ const Game = props=>{
 
 
 
-    return( 
-        <>
+    return( Container
+            <>
             {
                 gameEnd?(
                     <div>
@@ -152,34 +135,29 @@ const Game = props=>{
                     </div>
                 )
             }
-            <Container>
-                <div className="square">
-                        {
-                            grid.map((gLine, i)=>{
+         
+        <div className="square">
+                {
+                    grid.map((gLine, i)=>{
+                        return(
+                            gLine.map((el,j)=>{
                                 return(
-                                    gLine.map((el,j)=>{
-                                        return(
-                                            <Square
-                                            label = {el}
-                                            i={i}
-                                            j={j}
-                                            setValue={setValue}
-                                            />
-                                        )
-                                    })
+                                    <Square
+                                    label = {el}
+                                    i={i}
+                                    j={j}
+                                    setValue={setValue}
+                                    />
                                 )
                             })
-                        }
-                        <Buttons>
-                            <Button text="Main Menu" routeTo="/"></Button>
-                            <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
-                                <br></br>
-                            </LeaderButton>
-                        </Buttons>     
-                </div>
-            </Container>
-        </> 
+                        )
+                    })
+                }
+                 <Button text="Main Menu" routeTo="/"></Button>
+                 <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                 <br></br>
+        </div>
+        </>
     )
 }
 

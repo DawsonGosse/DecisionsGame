@@ -25,7 +25,7 @@ const Buttons = styled.div`
     justify-content:center;
     align-items:center;
     margin-top: 30px;
-    padding-left: 40px;
+    padding-left: 30px;
 `
 const LeaderButton = styled.div`
     display: flex;

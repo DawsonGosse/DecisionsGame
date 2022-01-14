@@ -13,26 +13,13 @@ const INITIAL_GRID = [
 // Page Layout
 const Container = styled.div`
     display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 60px;
+    margin-top: 5%;
 `
 
-const Buttons = styled.div`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    margin-top: 30px;
-    padding-left: 40px;
-`
-const LeaderButton = styled.div`
+const buttonContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
+    height: 100px;
+    just
 `
 
 
@@ -141,43 +128,41 @@ const Game = props=>{
 
     return( 
         <>
-            {
-                gameEnd?(
-                    <div>
-                        the {gameWinner==='X'?'Player 1 (X)':'Player 2 (O)'} Won The Game!                    
-                        </div>
-                ):(
-                    <div>
-                        {!turn?"Player 1 (O) :":"Player 2 (X)"}
+        {
+            gameEnd?(
+                <div>
+                    the {gameWinner==='X'?'Player 1 (X)':'Player 2 (O)'} Won The Game!                    
                     </div>
-                )
-            }
-            <Container>
-                <div className="square">
-                        {
-                            grid.map((gLine, i)=>{
-                                return(
-                                    gLine.map((el,j)=>{
-                                        return(
-                                            <Square
-                                            label = {el}
-                                            i={i}
-                                            j={j}
-                                            setValue={setValue}
-                                            />
-                                        )
-                                    })
-                                )
-                            })
-                        }
-                        <Buttons>
-                            <Button text="Main Menu" routeTo="/"></Button>
-                            <LeaderButton>
-                                <Button text="Leaderboards" routeTo="/leaderboard"></Button>
-                                <br></br>
-                            </LeaderButton>
-                        </Buttons>     
+            ):(
+                <div>
+                    {!turn?"Player 1 (O) :":"Player 2 (X)"}
                 </div>
+            )
+        }
+        <Container>
+            <div className="square">
+                    {
+                        grid.map((gLine, i)=>{
+                            return(
+                                gLine.map((el,j)=>{
+                                    return(
+                                        <Square
+                                        label = {el}
+                                        i={i}
+                                        j={j}
+                                        setValue={setValue}
+                                        />
+                                    )
+                                })
+                            )
+                        })
+                    }
+                    <buttonContainer>
+                        <Button text="Main Menu" routeTo="/"></Button>
+                        <Button text="Leaderboards" routeTo="/leaderboard"></Button>
+                        <br></br>
+                    </buttonContainer>     
+            </div>
             </Container>
         </> 
     )
