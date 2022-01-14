@@ -9,7 +9,7 @@ const Container = styled.div`
     padding: 15px;
 `;
 
-const Circle = styled.div`
+const Circle = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,7 @@ const Circle = styled.div`
     width: 80px;
     background-color: ${props=>props.back};
     border-radius: 50%;
+    border: none;
 `;
 
 
