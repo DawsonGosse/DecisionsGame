@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '../comps/Button';
 
 //Styling
@@ -33,46 +33,81 @@ const ButtonIcon = styled.img`
     height: 50px;
 `
 
-//Leaderboard
-if (typeof window !== "undefined") {
-    localStorage.setItem("P1rockpapersissors", 10)
-    localStorage.setItem("P2rockpapersissors", 8)
-}
+const LeaderButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
 
 //Game
 let user1Choice = 'null'
 let user2Choice = 'null'
 
+//Leaderboard
+let p1Score = 0
+let p2Score = 0
+
 function Compare(choice1, choice2) {
+    //Leaderboard
+    if (typeof window !== "undefined") {
+        localStorage.setItem("P1rockpapersissors", p1Score)
+        localStorage.setItem("P2rockpapersissors", p2Score)
+    }
+
     //Tie
     if(choice1 == choice2 & choice1 != 'null') {
+        console.log('tie')
         alert('tie')
     }
 
     //Player 1 Wins
     if (choice1 == 'paper' && choice2 == 'rock') {
+        console.log('player 1 wins')
         alert('player 1 wins')
+        p1Score++
+        console.log(p1Score)
     }
     if (choice1 == 'rock' && choice2 == 'scissors') {
+        console.log('player 1 wins')
         alert('player 1 wins')
+        p1Score++
+        console.log(p1Score)
     }
     if (choice1 == 'scissors' && choice2 == 'paper') {
         alert('player 1 wins')
+        p1Score++
+        console.log(p1Score)
     }
 
     //Player 2 Wins
     if (choice2 == 'paper' && choice1 == 'rock') {
+        console.log('player 2 wins')
         alert('player 2 wins')
+        p2Score++
+        console.log(p2Score)
     }
     if (choice2 == 'rock' && choice1 == 'scissors') {
+        console.log('player 2 wins')
         alert('player 2 wins')
+        p2Score++
+        console.log(p2Score)
     }
     if (choice2 == 'scissors' && choice1 == 'paper') {
+        console.log('player 2 wins')
         alert('player 2 wins')
-        return false
+        p2Score++
+        console.log(p2Score)
     }
 }   
 
+function Results() {
+    Compare(user1Choice, user2Choice)
+    user1Choice = "null"
+    user2Choice = "null"
+
+}
 export default function RPS() {
     //Player 1 Choices
     const SelectPaper1 = function(){
@@ -121,6 +156,10 @@ export default function RPS() {
             <ChoiceButton onClick={SelectScissor2}><ButtonIcon src="/scissors.svg"/></ChoiceButton>
         </PlayerChoicesCont>  
   
-        <Button text='Done' onSubmit={Compare (user1Choice, user2Choice)}></Button>
+        <Button text='Results' onSubmit={Results()}></Button>
+
+        <LeaderButton>
+            <Button routeTo="/leaderboard" text="Leaderboard" bgcolor="rgba(88, 119, 138, 0.54)"></Button>
+        </LeaderButton>
     </Container>
 }
