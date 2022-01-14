@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import CircleText from '../comps/CircleText';
 import Button from '../comps/Button';
 
 //Styling
@@ -18,19 +17,33 @@ const PlayerChoicesCont = styled.div`
     margin-bottom: 60px;
 `
 
+const ChoiceButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    background-color: #58778A;
+    border-radius: 50%;
+    border: none;
+    margin: 10px;
+`
+
+const ButtonIcon = styled.img`
+    height: 50px;
+`
+
 //Leaderboard
-
-let p1ScoreRPS = 0;
-let p2ScoreRPS = 0;
-
-
-
+if (typeof window !== "undefined") {
+    localStorage.setItem("P1rockpapersissors", 10)
+    localStorage.setItem("P2rockpapersissors", 8)
+}
 
 //Game
 let user1Choice = 'null'
 let user2Choice = 'null'
 
-let Compare = function(choice1, choice2) {
+function Compare(choice1, choice2) {
     //Tie
     if(choice1 == choice2 & choice1 != 'null') {
         alert('tie')
@@ -38,36 +51,25 @@ let Compare = function(choice1, choice2) {
 
     //Player 1 Wins
     if (choice1 == 'paper' && choice2 == 'rock') {
-        p1ScoreRPS++
         alert('player 1 wins')
-
     }
     if (choice1 == 'rock' && choice2 == 'scissors') {
-        p1ScoreRPS++
         alert('player 1 wins')
-        
     }
     if (choice1 == 'scissors' && choice2 == 'paper') {
-        p1ScoreRPS++
         alert('player 1 wins')
     }
 
     //Player 2 Wins
     if (choice2 == 'paper' && choice1 == 'rock') {
-        p2ScoreRPS++
         alert('player 2 wins')
     }
     if (choice2 == 'rock' && choice1 == 'scissors') {
-        p2ScoreRPS++
         alert('player 2 wins')
     }
     if (choice2 == 'scissors' && choice1 == 'paper') {
-        p2ScoreRPS++
         alert('player 2 wins')
-    }
-    if (typeof window !== "undefined") {
-        localStorage.setItem("P1rockpapersissors", p1ScoreRPS)
-        localStorage.setItem("P2rockpapersissors", p2ScoreRPS)
+        return false
     }
 }   
 
@@ -106,19 +108,19 @@ export default function RPS() {
         <h3>Player 1</h3>
         <PlayerChoicesCont>
             {/* Player 1 */}
-            <button onClick={SelectRock1}>Rock</button>
-            <button onClick={SelectPaper1}>Paper</button>
-            <button onClick={SelectScissor1}>Scissors</button>
+            <ChoiceButton onClick={SelectRock1}><ButtonIcon src="/rock.svg"/></ChoiceButton>
+            <ChoiceButton onClick={SelectPaper1}><ButtonIcon src="/paper.svg"/></ChoiceButton>
+            <ChoiceButton onClick={SelectScissor1}><ButtonIcon src="/scissors.svg"/></ChoiceButton>
         </PlayerChoicesCont>  
 
         <h3>Player 2</h3>
         <PlayerChoicesCont>
             {/* Player 2 */}
-            <button onClick={SelectRock2}>Rock</button>
-            <button onClick={SelectPaper2}>Paper</button>
-            <button onClick={SelectScissor2}>Scissors</button>
+            <ChoiceButton onClick={SelectRock2}><ButtonIcon src="/rock.svg"/></ChoiceButton>
+            <ChoiceButton onClick={SelectPaper2}><ButtonIcon src="/paper.svg"/></ChoiceButton>
+            <ChoiceButton onClick={SelectScissor2}><ButtonIcon src="/scissors.svg"/></ChoiceButton>
         </PlayerChoicesCont>  
   
-        <Button text='Done' onClick={Compare (user1Choice, user2Choice)}></Button>
+        <Button text='Done' onSubmit={Compare (user1Choice, user2Choice)}></Button>
     </Container>
 }
