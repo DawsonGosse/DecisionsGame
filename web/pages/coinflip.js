@@ -38,12 +38,6 @@ let p2Score = 0;
 let userChoice = "null";
 const Flip = function(){
 
-    if (typeof window !== "undefined") {
-
-        localStorage.setItem("P1CoinFlip", p1Score)
-        localStorage.setItem("P2CoinFlip", p2Score)
-        
-    }
 
     let coin = Math.random();
     console.log(coin)
@@ -75,6 +69,13 @@ const Flip = function(){
                 p2Score++
                 console.log(p2Score)
             }
+        }
+
+        if (typeof window !== "undefined") {
+
+            localStorage.setItem("P1CoinFlip", p1Score)
+            localStorage.setItem("P2CoinFlip", p2Score)
+            
         }
 
     }
