@@ -10,7 +10,7 @@ const Square = ({label,i,j,setValue})=>{
                 {label}
             </div>
         </div>
-    )
+)
 }
 
 export default Square;
