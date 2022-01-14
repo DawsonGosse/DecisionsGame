@@ -24,6 +24,13 @@ const GameTitle = styled.div`
   justify-content: center;
   padding-top: 50px;
 `
+const LeaderButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
 
 
 export default function Coin() {
@@ -40,6 +47,9 @@ export default function Coin() {
         <Slider routeTo="/coin" back="#D3E1C5"></Slider>
       </SliderCont>
         <Button routeTo="/coinflip" bgcolor="#D3E1C5" ></Button>
+          <LeaderButton>
+            <Button routeTo="/leaderboard" text="Leaderboard" bgcolor="rgba(211, 225, 197, 0.6)"></Button>
+          </LeaderButton>
     </Container>
   )
 }

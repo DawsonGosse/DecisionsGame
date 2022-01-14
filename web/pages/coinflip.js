@@ -18,7 +18,20 @@ const Buttons  = styled.div `
     align-items:center;
 `;
 
-
+const LeaderButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
+const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+`
 
 let p1Score = 0;
 let p2Score = 0;
@@ -78,15 +91,20 @@ export default function CoinFlip() {
         }
         return <Container>
 
-            <h1>PLAYER 1</h1>
-            <h3>Pick One</h3>
+            <Title>
+                <h1>PLAYER 1</h1>
+                <h3>Pick One</h3>
+            </Title>
 
             <Buttons>
                 <CoinButton onButtonClick={SelectHeads}></CoinButton>
                 <CoinButton onButtonClick={SelectTails} src="tails.svg" text="Tails"></CoinButton>
             </Buttons>
 
-            <Button text='Done'bgcolor="#D3E1C5"></Button>
-    
+            <Button routeTo="/" text='Done'bgcolor="#D3E1C5"></Button>
+            <LeaderButton>
+                <Button routeTo="/leaderboard" text="Leaderboard" bgcolor="rgba(211, 225, 197, 0.6)"></Button>
+            </LeaderButton>
+
         </Container>
     }

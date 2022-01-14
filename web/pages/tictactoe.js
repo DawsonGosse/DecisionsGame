@@ -24,7 +24,13 @@ const GameTitle = styled.div`
   justify-content: center;
   padding-top: 50px;
 `
-
+const LeaderButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
 
 export default function Coin() {
   return (
@@ -40,6 +46,9 @@ export default function Coin() {
         <Slider routeTo="/coin" back="lightgrey"></Slider>
       </SliderCont>
         <Button routeTo="/tictacgame" bgcolor="#85A9A1" ></Button>
+          <LeaderButton>
+            <Button routeTo="/leaderboard" text="Leaderboard" bgcolor="rgba(133, 169, 161, 0.5)"></Button>
+          </LeaderButton>
     </Container>
   )
 }
