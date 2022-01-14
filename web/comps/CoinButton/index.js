@@ -41,9 +41,10 @@ const CoinButton = ({
     src="/head.svg",
     width="50px",
     color="grey",
+    onButtonClick=()=>{}
 }) =>{
     
-    return <Container>
+    return <Container onClick={()=>{onButtonClick()}}>
         <Coinbutt>
             <Icon src={src} width={width}/>
         </Coinbutt>

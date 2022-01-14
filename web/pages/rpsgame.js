@@ -18,7 +18,6 @@ const PlayerChoicesCont = styled.div`
     margin-bottom: 60px;
 `
 
-
 //Leaderboard
 if (typeof window !== "undefined") {
     localStorage.setItem("P1rockpapersissors", 10)
@@ -57,7 +56,6 @@ let Compare = function(choice1, choice2) {
         alert('player 2 wins')
     }
 }   
-
 
 export default function RPS() {
     //Player 1 Choices
@@ -106,7 +104,7 @@ export default function RPS() {
             <button onClick={SelectPaper2}>Paper</button>
             <button onClick={SelectScissor2}>Scissors</button>
         </PlayerChoicesCont>  
-
+  
         <Button text='Done' onClick={Compare (user1Choice, user2Choice)}></Button>
     </Container>
 }
